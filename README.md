@@ -46,6 +46,6 @@ Depois de abrir o localhost informado e feito o login, criamos um usuário para 
 no db do mongo. 
 
 Segue os comandos no terminal para criar usuário e dar role de readWrite:
-    docker exec -it mongodb mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin --eval "db.getSiblingDB('heros').createUser({user: 'japuamelo', pwd: 'minhasenhasecreta', roles:[{role:'readWrite', db: 'heros'}]})"
+    docker exec -it mongodb mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin --eval "db.getSiblingDB('db_nome').createUser({user: 'novo_usuario_nome', pwd: 'nova_senha_usuario', roles:[{role:'readWrite', db: 'db_nome'}]})"
 
 
