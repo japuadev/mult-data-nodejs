@@ -1,5 +1,5 @@
 docker ps
-docker exec -it 2e3c84dfd7e1 mongo mongodb:27017 -u japuamelo -p minhasenhasecreta --authenticationDatabase heros
+docker exec -it b4e1ea5ada47 mongo mongodb:27017 -u japuamelo -p minhasenhasecreta --authenticationDatabase heros
 
 comamdos:
 - show dbs / para mostrar os clusters

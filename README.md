@@ -37,7 +37,7 @@ docker run
 -d mongo:versaao
 
 Todos os comandos acima no mesmo esquema, rodados em uma única linha. 
-(docker run --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=usuario -e MONGO_INITDB_ROOT_PASSWORD=senha_usuario -d mongo:versao).
+(docker run --name mongodb -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=senhaadmin -d mongo:4).
 
 <h5>Configurações de user para o MongoDB </h5>
 docker run --name mongoclient -p 3000:3000 --link mongodb:mongodb -d mongoclient/mongoclient 
@@ -46,6 +46,6 @@ Depois de abrir o localhost informado e feito o login, criamos um usuário para 
 no db do mongo. 
 
 Segue os comandos no terminal para criar usuário e dar role de readWrite:
-    docker exec -it mongodb mongo --host localhost -u usuario -p senha_usuario --authenticationDatabase usuario --eval "db.getSiblingDB('nome_db').createUser({user: 'nome_novo_usuario', pwd: 'senha_novo_usuario', roles:[{role:'readWrite', db: 'nome_db'}]})"
+    docker exec -it mongodb mongo --host localhost -u admin -p senhaadmin --authenticationDatabase admin --eval "db.getSiblingDB('heros').createUser({user: 'japuamelo', pwd: 'minhasenhasecreta', roles:[{role:'readWrite', db: 'heros'}]})"
 
 

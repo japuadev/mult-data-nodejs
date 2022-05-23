@@ -1,3 +1,4 @@
 utils.txt 
 node_modules/ 
 README.md
+mongoStrategy.test.js
